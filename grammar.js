@@ -51,6 +51,8 @@ module.exports = grammar({
     $.line_comment,
     $.block_comment,
     /\s/,
+    $._ws,
+    $._newline
   ],
 
   supertypes: $ => [
@@ -98,6 +100,9 @@ module.exports = grammar({
       $.statement,
       $.method_declaration,
     ),
+
+    _ws: $ => token(/[ \t]+/),
+    _newline: $ => token(/\r|\n|(\r\n)/),
 
     // Literals
 
@@ -1031,7 +1036,7 @@ module.exports = grammar({
 
     annotation_type_declaration: $ => seq(
       optional($.modifiers),
-      '@interface',
+      $.kw_annotation,
       field('name', $.identifier),
       field('body', $.annotation_type_body),
     ),
@@ -1278,6 +1283,8 @@ module.exports = grammar({
       ),
       $.identifier,
     )),
+
+    kw_annotation: $ => '@interface',
 
     this: _ => 'this',
 
