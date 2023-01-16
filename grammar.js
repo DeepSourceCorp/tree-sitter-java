@@ -53,6 +53,8 @@ module.exports = grammar({
     $.ws,
     $.newline,
     /\s/,
+    $._ws,
+    $._newline
   ],
 
   supertypes: $ => [

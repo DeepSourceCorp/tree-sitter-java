@@ -36,6 +36,20 @@
         }
       ]
     },
+    "_ws": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[ \\t]+"
+      }
+    },
+    "_newline": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\r|\\n|(\\r\\n)"
+      }
+    },
     "_literal": {
       "type": "CHOICE",
       "members": [
