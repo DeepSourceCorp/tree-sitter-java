@@ -524,9 +524,13 @@
       }
     },
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
+        {
+          "type": "kw_annotation",
+          "named": true
+        },
         {
           "type": "modifiers",
           "named": true
@@ -4217,10 +4221,6 @@
     "named": false
   },
   {
-    "type": "@interface",
-    "named": false
-  },
-  {
     "type": "[",
     "named": false
   },
@@ -4387,6 +4387,10 @@
   {
     "type": "interface",
     "named": false
+  },
+  {
+    "type": "kw_annotation",
+    "named": true
   },
   {
     "type": "line_comment",
