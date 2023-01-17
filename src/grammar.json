@@ -22,14 +22,14 @@
         }
       ]
     },
-    "_ws": {
+    "ws": {
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
         "value": "[ \\t]+"
       }
     },
-    "_newline": {
+    "newline": {
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
@@ -7802,11 +7802,11 @@
     },
     {
       "type": "SYMBOL",
-      "name": "_ws"
+      "name": "ws"
     },
     {
       "type": "SYMBOL",
-      "name": "_newline"
+      "name": "newline"
     }
   ],
   "conflicts": [

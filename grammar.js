@@ -51,8 +51,8 @@ module.exports = grammar({
     $.line_comment,
     $.block_comment,
     /\s/,
-    $._ws,
-    $._newline
+    $.ws,
+    $.newline
   ],
 
   supertypes: $ => [
@@ -101,8 +101,8 @@ module.exports = grammar({
       $.method_declaration,
     ),
 
-    _ws: $ => token(/[ \t]+/),
-    _newline: $ => token(/\r|\n|(\r\n)/),
+    ws: $ => token(/[ \t]+/),
+    newline: $ => token(/\r|\n|(\r\n)/),
 
     // Literals
 

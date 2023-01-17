@@ -4413,6 +4413,10 @@
     "named": false
   },
   {
+    "type": "newline",
+    "named": true
+  },
+  {
     "type": "non-sealed",
     "named": false
   },
@@ -4563,6 +4567,10 @@
   {
     "type": "with",
     "named": false
+  },
+  {
+    "type": "ws",
+    "named": true
   },
   {
     "type": "yield",
