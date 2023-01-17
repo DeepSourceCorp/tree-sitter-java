@@ -36,14 +36,14 @@
         }
       ]
     },
-    "_ws": {
+    "ws": {
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
         "value": "[ \\t]+"
       }
     },
-    "_newline": {
+    "newline": {
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
