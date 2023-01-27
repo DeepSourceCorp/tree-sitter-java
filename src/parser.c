@@ -6495,8 +6495,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 24:
       if (lookahead == '=') ADVANCE(116);
       END_STATE();
+    case 24:
+      if (lookahead == '=') ADVANCE(112);
+      END_STATE();
     case 25:
-      if (lookahead == '\\') ADVANCE(57);
+      if (lookahead == '\\') ADVANCE(56);
       if (lookahead != 0 &&
           lookahead != '\n' &&
           lookahead != '\'') ADVANCE(16);
@@ -6696,7 +6699,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (sym_identifier_character_set_1(lookahead)) ADVANCE(170);
       END_STATE();
     case 61:
-      ACCEPT_TOKEN(ts_builtin_sym_end);
+      ACCEPT_TOKEN(sym_decimal_integer_literal);
       END_STATE();
     case 62:
       ACCEPT_TOKEN(sym_ws);
@@ -6911,6 +6914,9 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 87:
       ACCEPT_TOKEN(sym_string_literal);
       END_STATE();
+    case 87:
+      ACCEPT_TOKEN(anon_sym_AMP);
+      END_STATE();
     case 88:
       ACCEPT_TOKEN(sym_string_literal);
       if (lookahead == '"') ADVANCE(10);
@@ -7111,6 +7117,9 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_GT_GT_GT);
       if (lookahead == '=') ADVANCE(107);
       END_STATE();
+    case 141:
+      ACCEPT_TOKEN(anon_sym_COLON);
+      END_STATE();
     case 142:
       ACCEPT_TOKEN(anon_sym_DASH_GT);
       END_STATE();
@@ -7140,6 +7149,9 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 150:
       ACCEPT_TOKEN(anon_sym_PLUS_PLUS);
       END_STATE();
+    case 150:
+      ACCEPT_TOKEN(anon_sym_DOT);
+      END_STATE();
     case 151:
       ACCEPT_TOKEN(anon_sym_DASH_DASH);
       END_STATE();
@@ -7167,6 +7179,9 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 158:
       ACCEPT_TOKEN(anon_sym_COLON_COLON);
+      END_STATE();
+    case 158:
+      ACCEPT_TOKEN(anon_sym_AT);
       END_STATE();
     case 159:
       ACCEPT_TOKEN(anon_sym_LBRACE);
