@@ -5249,7 +5249,7 @@ static inline bool sym_identifier_character_set_1(int32_t c) {
                   : c <= 67826)
                 : (c <= 67829 || (c < 67872
                   ? (c >= 67840 && c <= 67861)
-                  : c <= 67880)))))))))))))));
+                  : c <= 67883)))))))))))))));
 }
 
 static inline bool sym_identifier_character_set_2(int32_t c) {
@@ -5763,7 +5763,7 @@ static inline bool sym_identifier_character_set_2(int32_t c) {
                   : c <= 67826)
                 : (c <= 67829 || (c < 67872
                   ? (c >= 67840 && c <= 67861)
-                  : c <= 67880)))))))))))))));
+                  : c <= 67883)))))))))))))));
 }
 
 static inline bool sym_identifier_character_set_3(int32_t c) {
@@ -6277,7 +6277,7 @@ static inline bool sym_identifier_character_set_3(int32_t c) {
                   : c <= 67826)
                 : (c <= 67829 || (c < 67872
                   ? (c >= 67840 && c <= 67861)
-                  : c <= 67880)))))))))))))));
+                  : c <= 67883)))))))))))))));
 }
 
 static inline bool sym_identifier_character_set_4(int32_t c) {
@@ -6791,7 +6791,7 @@ static inline bool sym_identifier_character_set_4(int32_t c) {
                   : (c <= 67742 || (c >= 67808 && c <= 67826)))
                 : (c <= 67829 || (c < 67872
                   ? (c >= 67840 && c <= 67861)
-                  : c <= 67880)))))))))))))));
+                  : c <= 67883)))))))))))))));
 }
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
