@@ -365,7 +365,7 @@ module.exports = grammar({
       optional($.class_body)
     )),
 
-    field_access: $ => prec.dynamic(PREC.OBJ_ACCESS, seq(
+    field_access: $ => seq(
       field('object', choice($.primary_expression, $.super)),
       optional(seq(
         '.',
@@ -373,7 +373,7 @@ module.exports = grammar({
       )),
       '.',
       field('field', choice($.identifier, $._reserved_identifier, $.this))
-    )),
+    ),
 
     array_access: $ => seq(
       field('array', $.primary_expression),
