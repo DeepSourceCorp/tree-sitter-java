@@ -6,7 +6,7 @@
       "type": "REPEAT",
       "content": {
         "type": "SYMBOL",
-        "name": "statement"
+        "name": "_toplevel_statement"
       }
     },
     "ws": {
@@ -22,6 +22,19 @@
         "type": "PATTERN",
         "value": "\\r|\\n|(\\r\\n)"
       }
+    },
+    "_toplevel_statement": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_declaration"
+        }
+      ]
     },
     "_literal": {
       "type": "CHOICE",

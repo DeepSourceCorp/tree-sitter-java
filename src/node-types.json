@@ -2946,6 +2946,10 @@
       "required": false,
       "types": [
         {
+          "type": "method_declaration",
+          "named": true
+        },
+        {
           "type": "statement",
           "named": true
         }
