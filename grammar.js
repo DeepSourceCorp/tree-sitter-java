@@ -162,6 +162,7 @@ module.exports = grammar({
       repeat(choice(
         $.string_fragment,
         $.escape_sequence,
+        $.string_interpolation,
       )),
       '"'
     ),
@@ -170,6 +171,7 @@ module.exports = grammar({
       repeat(choice(
         alias($._multiline_string_fragment, $.multiline_string_fragment),
         $._escape_sequence,
+        $.string_interpolation,
       )),
       '"""'
     ),
@@ -184,6 +186,12 @@ module.exports = grammar({
         /[^"]+/,
         seq(/"[^"]*/, repeat(/[^"]+/))
       )),
+
+    string_interpolation: $ => seq(
+      '\\{',
+      $.expression,
+      '}'
+    ),
 
     _escape_sequence: $ =>
       choice(
@@ -340,6 +348,7 @@ module.exports = grammar({
       $.method_invocation,
       $.method_reference,
       $.array_creation_expression,
+      $.template_expression
     ),
 
     array_creation_expression: $ => prec.right(seq(
@@ -389,6 +398,12 @@ module.exports = grammar({
       )),
       '.',
       field('field', choice($.identifier, $._reserved_identifier, $.this))
+    ),
+
+    template_expression: $ => seq(
+      field('template_processor', $.primary_expression),
+      '.',
+      field('template_argument', $.string_literal)
     ),
 
     array_access: $ => seq(
