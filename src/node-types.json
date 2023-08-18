@@ -2148,6 +2148,21 @@
     }
   },
   {
+    "type": "guard",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "if_statement",
     "named": true,
     "fields": {
@@ -3508,6 +3523,10 @@
           "named": true
         },
         {
+          "type": "guard",
+          "named": true
+        },
+        {
           "type": "pattern",
           "named": true
         }
@@ -4518,6 +4537,10 @@
   },
   {
     "type": "volatile",
+    "named": false
+  },
+  {
+    "type": "when",
     "named": false
   },
   {
