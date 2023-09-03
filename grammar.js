@@ -387,9 +387,14 @@ module.exports = grammar({
 
     _unqualified_object_creation_expression: $ => prec.right(seq(
       'new',
-      repeat($._annotation),
-      field('type_arguments', optional($.type_arguments)),
-      repeat($._annotation),
+      choice(
+        seq(
+          repeat($._annotation),
+          field('type_arguments', $.type_arguments),
+          repeat($._annotation),
+        ),
+        repeat($._annotation),
+      ),
       field('type', $._simple_type),
       field('arguments', $.argument_list),
       optional($.class_body)
