@@ -50,11 +50,9 @@ module.exports = grammar({
   extras: $ => [
     $.line_comment,
     $.block_comment,
-    $.ws,
-    $.newline,
     /\s/,
     $.ws,
-    $.newline
+    $.newline,
   ],
 
   supertypes: $ => [

@@ -9,20 +9,6 @@
         "name": "_toplevel_statement"
       }
     },
-    "ws": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PATTERN",
-        "value": "[ \\t]+"
-      }
-    },
-    "newline": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PATTERN",
-        "value": "\\r|\\n|(\\r\\n)"
-      }
-    },
     "_toplevel_statement": {
       "type": "CHOICE",
       "members": [
