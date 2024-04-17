@@ -3023,13 +3023,6 @@
             ]
           },
           {
-            "type": "REPEAT",
-            "content": {
-              "type": "SYMBOL",
-              "name": "_annotation"
-            }
-          },
-          {
             "type": "FIELD",
             "name": "type",
             "content": {
@@ -7799,6 +7792,10 @@
     {
       "type": "SYMBOL",
       "name": "block_comment"
+    },
+    {
+      "type": "PATTERN",
+      "value": "\\s"
     },
     {
       "type": "SYMBOL",
