@@ -1,4 +1,4 @@
-tree-sitter-java
+tree-sitter-java 
 ================
 
 [![Build/test](https://github.com/tree-sitter/tree-sitter-java/actions/workflows/ci.yml/badge.svg)](https://github.com/tree-sitter/tree-sitter-java/actions/workflows/ci.yml)
