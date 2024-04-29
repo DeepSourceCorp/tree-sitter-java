@@ -7794,10 +7794,6 @@
       "name": "block_comment"
     },
     {
-      "type": "PATTERN",
-      "value": "\\s"
-    },
-    {
       "type": "SYMBOL",
       "name": "ws"
     },
